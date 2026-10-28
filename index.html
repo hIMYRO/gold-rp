@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOLD RP — Правила профессий</title>
     <style>
-        /* --- Аниме-стиль: тёмный фон, неон, стекло --- */
         :root {
             --bg-dark: #0a0a12;
             --bg-card: rgba(20, 20, 35, 0.8);
@@ -16,11 +15,7 @@
             --border-glow: rgba(255, 107, 157, 0.3);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg-dark);
@@ -34,17 +29,9 @@
             padding: 40px 20px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .container { max-width: 900px; margin: 0 auto; }
 
-        /* Заголовок в аниме-стиле */
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
+        header { text-align: center; margin-bottom: 50px; }
 
         h1 {
             font-size: 3rem;
@@ -57,14 +44,8 @@
             margin-bottom: 10px;
         }
 
-        .subtitle {
-            color: var(--text-sub);
-            font-size: 1.1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+        .subtitle { color: var(--text-sub); font-size: 1.1rem; letter-spacing: 2px; text-transform: uppercase; }
 
-        /* Стеклянные карточки для правил */
         .rule-card {
             background: var(--bg-card);
             backdrop-filter: blur(10px);
@@ -86,9 +67,6 @@
             color: var(--neon-pink);
             font-size: 1.6rem;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
             border-bottom: 1px solid rgba(255, 107, 157, 0.2);
             padding-bottom: 10px;
         }
@@ -100,53 +78,15 @@
             margin-bottom: 10px;
         }
 
-        /* Стили для списков правил */
-        .rule-list {
-            list-style: none;
-            padding-left: 0;
-        }
+        .rule-list { list-style: none; padding-left: 0; }
+        .rule-list li { padding: 8px 0 8px 30px; position: relative; color: var(--text-main); }
+        .rule-list li::before { content: "▹"; position: absolute; left: 0; color: var(--neon-pink); font-weight: bold; }
 
-        .rule-list li {
-            padding: 8px 0 8px 30px;
-            position: relative;
-            color: var(--text-main);
-        }
+        .allow { color: #6bff9d; font-weight: 600; }
+        .deny { color: #ff6b6b; font-weight: 600; }
+        .note { color: var(--neon-blue); font-style: italic; font-size: 0.95rem; margin-top: 10px; padding: 10px; background: rgba(122, 184, 255, 0.1); border-radius: 10px; border-left: 3px solid var(--neon-blue); }
 
-        .rule-list li::before {
-            content: "▹";
-            position: absolute;
-            left: 0;
-            color: var(--neon-pink);
-            font-weight: bold;
-        }
-
-        /* Цветовые маркеры для разрешено/запрещено */
-        .allow {
-            color: #6bff9d;
-            font-weight: 600;
-        }
-
-        .deny {
-            color: #ff6b6b;
-            font-weight: 600;
-        }
-
-        .note {
-            color: var(--neon-blue);
-            font-style: italic;
-            font-size: 0.95rem;
-            margin-top: 10px;
-            padding: 10px;
-            background: rgba(122, 184, 255, 0.1);
-            border-radius: 10px;
-            border-left: 3px solid var(--neon-blue);
-        }
-
-        /* Адаптив */
-        @media (max-width: 600px) {
-            h1 { font-size: 2rem; }
-            .rule-card { padding: 15px 20px; }
-        }
+        @media (max-width: 600px) { h1 { font-size: 2rem; } .rule-card { padding: 15px 20px; } }
     </style>
 </head>
 <body>
@@ -159,106 +99,116 @@
         <!-- ЖИТЕЛИ ГОРОДА -->
         <div class="rule-card">
             <h2>🧑‍🤝‍🧑 ЖИТЕЛИ ГОРОДА (Мирные)</h2>
-            <p><strong>Общие правила:</strong> Не могут участвовать в крупных криминальных действиях (ограбление банка, война).</p>
-            <p class="note">Исключение: Охранник может защищать банк, если его нанял Банкир.</p>
-
             <h3>Гражданский</h3>
-            <ul class="rule-list">
-                <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
-                <li><span class="allow">✅ Может сотрудничать с криминалом и гос. служащими.</span></li>
-            </ul>
-
+            <p>Правила для Гражданского...</p>
             <h3>Паркурист</h3>
-            <ul class="rule-list">
-                <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
-                <li><span class="allow">✅ Может сотрудничать с криминалом и гос. служащими.</span></li>
-            </ul>
-
+            <p>Правила для Паркуриста...</p>
             <h3>Охранник</h3>
-            <ul class="rule-list">
-                <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
-                <li><span class="allow">✅ Может сотрудничать с криминалом и гос. служащими.</span></li>
-            </ul>
-
+            <p>Правила для Охранника...</p>
             <h3>Бармен</h3>
-            <ul class="rule-list">
-                <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
-                <li><span class="deny">❌ Не может сотрудничать с криминалом и гос. служащими.</span></li>
-                <li><span class="deny">❌ Нельзя ставить игровые автоматы без видимых расценок и казино вне жилых помещений.</span></li>
-            </ul>
-
+            <p>Правила для Бармена...</p>
             <h3>Продавец оружия</h3>
-            <ul class="rule-list">
-                <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
-                <li><span class="allow">✅ Может сотрудничать с криминалом и гос. служащими.</span></li>
-            </ul>
-
+            <p>Правила для Продавца оружия...</p>
             <h3>Владелец казино</h3>
-            <ul class="rule-list">
-                <li><span class="allow">✅ Может легально хранить денежные принтеры.</span></li>
-                <li><span class="deny">❌ Не может сотрудничать с криминалом.</span></li>
-            </ul>
-            <p class="note">📌 Обязан иметь вывеску и оборудованное помещение. Все игры должны быть честными (через /roll).</p>
-
+            <p>Правила для Владельца казино...</p>
             <h3>Врач</h3>
-            <ul class="rule-list">
-                <li><span class="deny">❌ Не может рейдить, грабить, похищать.</span></li>
-            </ul>
-            <p class="note">📌 Лечит всех. Может быть подпольным врачом для криминала.</p>
-
+            <p>Правила для Врача...</p>
             <h3>Бездомный (Бомж)</h3>
-            <ul class="rule-list">
-                <li><span class="deny">❌ Не может иметь принтеры.</span></li>
-                <li><span class="allow">✅ Может грабить всех игроков (кроме Предводителя и других Бездомных).</span></li>
-                <li><span class="deny">❌ Не может сотрудничать с гос. служащими.</span></li>
-            </ul>
-
+            <p>Правила для Бездомного...</p>
             <h3>Предводитель бездомных</h3>
-            <ul class="rule-list">
-                <li><span class="deny">❌ Не может иметь принтеры.</span></li>
-                <li><span class="allow">✅ Может грабить всех игроков (кроме своих подчиненных).</span></li>
-                <li><span class="allow">✅ Может сотрудничать с криминалом.</span></li>
-                <li><span class="deny">❌ Не может сотрудничать с гос. служащими.</span></li>
-            </ul>
-            <p class="note">📌 Лидер группировки бездомных, может нанимать других Бездомных.</p>
+            <p>Правила для Предводителя бездомных...</p>
+        </div>
+
+        <!-- КРИМИНАЛ -->
+        <div class="rule-card">
+            <h2>💀 КРИМИНАЛ</h2>
+            <h3>Бандит</h3>
+            <p>Правила для Бандита...</p>
+            <h3>Опытный бандит</h3>
+            <p>Правила для Опытного бандита...</p>
+            <h3>Головорез</h3>
+            <p>Правила для Головореза...</p>
+            <h3>Наемный убийца</h3>
+            <p>Правила для Наемного убийцы...</p>
+            <h3>Глава бандитов</h3>
+            <p>Правила для Главы бандитов...</p>
+            <h3>Вор</h3>
+            <p>Правила для Вора...</p>
+            <h3>Опытный вор</h3>
+            <p>Правила для Опытного вора...</p>
+            <h3>Взломщик</h3>
+            <p>Правила для Взломщика...</p>
+            <h3>Маньяк</h3>
+            <p>Правила для Маньяка...</p>
+            <h3>Террорист</h3>
+            <p>Правила для Террориста...</p>
+            <h3>Наркобарон</h3>
+            <p>Правила для Наркобарона...</p>
+            <h3>Производитель коки</h3>
+            <p>Правила для Производителя коки...</p>
+            <h3>Нелегальный торговец</h3>
+            <p>Правила для Нелегального торговца...</p>
+        </div>
+
+        <!-- ПРАВООХРАНИТЕЛЬНЫЕ ОРГАНЫ -->
+        <div class="rule-card">
+            <h2>👮 ПРАВООХРАНИТЕЛЬНЫЕ ОРГАНЫ</h2>
+            <h3>Полицейский</h3>
+            <p>Правила для Полицейского...</p>
+            <h3>Шеф полиции</h3>
+            <p>Правила для Шефа полиции...</p>
+            <h3>Спецназ</h3>
+            <p>Правила для Спецназа...</p>
+            <h3>Командир спецназа</h3>
+            <p>Правила для Командира спецназа...</p>
+            <h3>Агент ФБР</h3>
+            <p>Правила для Агента ФБР...</p>
+            <h3>Джаггернаут</h3>
+            <p>Правила для Джаггернаута...</p>
         </div>
 
         <!-- ГОСУДАРСТВЕННАЯ ВЛАСТЬ -->
         <div class="rule-card">
             <h2>👑 ГОСУДАРСТВЕННАЯ ВЛАСТЬ</h2>
-
             <h3>Мэр</h3>
-            <ul class="rule-list">
-                <li><span class="deny">❌ Не может иметь принтеры (только хранение у Банкира).</span></li>
-                <li><span class="deny">❌ Запрещено сотрудничать с криминалом (исключение: принуждение).</span></li>
-            </ul>
-            <p class="note">📜 Законы: Не должны призывать к постоянному расстрелу/аресту вне военного положения.</p>
-            <p class="note">🚫 Запреты: Нельзя вводить налоги на жизнедеятельность (дышать, прыгать) и ставить цену лицензии выше 50.000.</p>
-            <p class="note">⚔️ Война: Может объявить военное положение только в случае объявления войны.</p>
+            <p>Правила для Мэра...</p>
         </div>
 
         <!-- СОТРУДНИКИ БАНКА -->
         <div class="rule-card">
             <h2>💼 СОТРУДНИКИ БАНКА</h2>
-
             <h3>Банкир</h3>
-            <ul class="rule-list">
-                <li><span class="allow">✅ Легально хранит денежные принтеры.</span></li>
-                <li><span class="deny">❌ Не может сотрудничать с криминалом.</span></li>
-            </ul>
-            <p class="note">📌 Обязан иметь банк с вывеской.</p>
-
+            <p>Правила для Банкира...</p>
             <h3>Инкассатор</h3>
-            <ul class="rule-list">
-                <li><span class="deny">❌ Не может иметь личные принтеры (только рабочие банковские).</span></li>
-                <li><span class="allow">✅ Может сотрудничать с Банкиром и гос. служащими.</span></li>
-                <li><span class="deny">❌ Запрещено сотрудничать с криминалом.</span></li>
-            </ul>
+            <p>Правила для Инкассатора...</p>
         </div>
 
-        <!-- Сюда ты можешь добавить остальные профессии из файла -->
-        <div class="rule-card" style="text-align: center; color: var(--text-sub);">
-            <p>... (Продолжение следует) ...</p>
+        <!-- КОРПОРАЦИЯ COBALT -->
+        <div class="rule-card">
+            <h2>🔬 КОРПОРАЦИЯ COBALT</h2>
+            <h3>Руководитель Кобальт</h3>
+            <p>Правила для Руководителя Кобальт...</p>
+            <h3>Солдат Кобальт</h3>
+            <p>Правила для Солдата Кобальт...</p>
+            <h3>Ученый Кобальт</h3>
+            <p>Правила для Ученого Кобальт...</p>
+            <h3>Экспериментатор Кобальт</h3>
+            <p>Правила для Экспериментатора Кобальт...</p>
+            <h3>Агент Кобальт</h3>
+            <p>Правила для Агента Кобальт...</p>
+        </div>
+
+        <!-- ДРУГИЕ -->
+        <div class="rule-card">
+            <h2>🛡️ ДРУГИЕ ПРОФЕССИИ</h2>
+            <h3>Забанен</h3>
+            <p>Правила для Забаненного...</p>
+            <h3>Администратор</h3>
+            <p>Правила для Администратора...</p>
+            <h3>Jacket</h3>
+            <p>Правила для Jacket...</p>
+            <h3>Опасная Бандитка</h3>
+            <p>Правила для Опасной Бандитки...</p>
         </div>
 
     </div>
