@@ -16,7 +16,11 @@
             --punish-color: #ff9d6b;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             background-color: var(--bg-dark);
@@ -30,9 +34,15 @@
             padding: 40px 20px;
         }
 
-        .container { max-width: 700px; margin: 0 auto; }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-        header { text-align: center; margin-bottom: 50px; }
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
         h1 {
             font-size: 3rem;
@@ -45,7 +55,12 @@
             margin-bottom: 10px;
         }
 
-        .subtitle { color: var(--text-sub); font-size: 1rem; letter-spacing: 3px; text-transform: uppercase; }
+        .subtitle {
+            color: var(--text-sub);
+            font-size: 1rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
 
         .category-title {
             color: #fff;
@@ -87,19 +102,71 @@
             padding-bottom: 8px;
         }
 
-        .rule-list { list-style: none; padding-left: 0; }
-        .rule-list li { padding: 4px 0 4px 20px; position: relative; display: block; font-size: 0.95rem; }
-        .rule-list li::before { content: "▹"; position: absolute; left: 0; color: var(--neon-blue); font-weight: bold; }
+        .rule-list {
+            list-style: none;
+            padding-left: 0;
+        }
 
-        .punish-list { list-style: none; padding-left: 0; }
-        .punish-list li { padding: 4px 0 4px 20px; position: relative; display: block; font-size: 0.95rem; color: var(--punish-color); font-weight: 600; }
-        .punish-list li::before { content: "⚖️"; position: absolute; left: 0; font-size: 0.8rem; }
+        .rule-list li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+            display: block;
+            font-size: 0.95rem;
+        }
 
-        .allow { color: #6bff9d; }
-        .deny { color: #ff6b6b; }
-        .note { color: #ffd700; font-style: italic; margin-top: 5px; display: block; font-size: 0.9rem; }
+        .rule-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--neon-blue);
+            font-weight: bold;
+        }
 
-        @media (max-width: 600px) { h1 { font-size: 2rem; } .rule-card { padding: 15px; } }
+        .punish-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .punish-list li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+            display: block;
+            font-size: 0.95rem;
+            color: var(--punish-color);
+            font-weight: 600;
+        }
+
+        .punish-list li::before {
+            content: "⚖️";
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+        }
+
+        .allow {
+            color: #6bff9d;
+        }
+
+        .deny {
+            color: #ff6b6b;
+        }
+
+        .note {
+            color: #ffd700;
+            font-style: italic;
+            margin-top: 5px;
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .rule-card {
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -112,6 +179,7 @@
         <!-- ПРАВИЛА ПРОФЕССИЙ -->
         <h2 class="category-title">📜 ПРАВИЛА ПРОФЕССИЙ</h2>
 
+        <!-- ЖИТЕЛИ ГОРОДА -->
         <div class="rule-card">
             <h3>Гражданский</h3>
             <ul class="rule-list">
@@ -179,12 +247,29 @@
                 <li><span class="deny">❌ Не может рейдить, грабить, похищать.</span></li>
             </ul>
         </div>
+
+        <!-- КРИМИНАЛ -->
         <div class="rule-card">
             <h3>Бандит</h3>
             <ul class="rule-list">
                 <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
                 <li><span class="allow">✅ Может грабить всех игроков.</span></li>
                 <li><span class="deny">❌ Не может сотрудничать с гос. служащими.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Опытный бандит</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
+                <li><span class="allow">✅ Может грабить всех игроков.</span></li>
+                <li><span class="deny">❌ Не может сотрудничать с гос. служащими.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Головорез</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Может убивать по заказу (киллы).</span></li>
+                <li><span class="deny">❌ Не может убивать без заказа или RP-причины.</span></li>
             </ul>
         </div>
         <div class="rule-card">
@@ -199,6 +284,13 @@
             </ul>
         </div>
         <div class="rule-card">
+            <h3>Глава бандитов</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Лидер банды, может нанимать Бандитов.</span></li>
+                <li><span class="allow">✅ Может организовывать рейды и ограбления.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
             <h3>Вор</h3>
             <ul class="rule-list">
                 <li><span class="deny">❌ Не может сотрудничать с гос. служащими.</span></li>
@@ -206,6 +298,23 @@
                 <li><span class="allow">✅ Может грабить pickpocket'ом при свидетелях.</span></li>
                 <li><span class="allow">✅ Может грабить только с мафией/громилой.</span></li>
                 <li><span class="deny">❌ Если вор работает один, то он не может взламывать помещения с людьми.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Опытный вор</h3>
+            <ul class="rule-list">
+                <li><span class="deny">❌ Не может сотрудничать с гос. служащими.</span></li>
+                <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
+                <li><span class="allow">✅ Может грабить pickpocket'ом при свидетелях.</span></li>
+                <li><span class="allow">✅ Может грабить только с мафией/громилой.</span></li>
+                <li><span class="deny">❌ Если вор работает один, то он не может взламывать помещения с людьми.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Взломщик</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Может взламывать двери и сейфы.</span></li>
+                <li><span class="deny">❌ Не может взламывать двери в спавне.</span></li>
             </ul>
         </div>
         <div class="rule-card">
@@ -219,6 +328,38 @@
             </ul>
         </div>
         <div class="rule-card">
+            <h3>Террорист</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Может сотрудничать с криминалом.</span></li>
+                <li><span class="allow">✅ Может нелегально иметь принтеры.</span></li>
+                <li><span class="note">📌 Терактом является подрыв бомбы. Запрещено убивать игроков во время него, если они не пытаются унести/обезвредить бомбу.</span></li>
+                <li><span class="deny">❌ Запрещено устраивать теракт в Мэрии/ПУ без объявления войны.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Наркобарон</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Производит и продает наркотики.</span></li>
+                <li><span class="deny">❌ Не может продавать наркотики в гос. зонах.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Производитель коки</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Производит коку в лаборатории.</span></li>
+                <li><span class="deny">❌ Не может рейдить без причины.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Нелегальный торговец</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Продает нелегальное оружие и предметы.</span></li>
+                <li><span class="deny">❌ Не может продавать полиции.</span></li>
+            </ul>
+        </div>
+
+        <!-- ПРАВООХРАНИТЕЛЬНЫЕ ОРГАНЫ -->
+        <div class="rule-card">
             <h3>Полицейский</h3>
             <ul class="rule-list">
                 <li><span class="deny">❌ Не может иметь принтеры (исключение: хранение у банкира).</span></li>
@@ -226,6 +367,48 @@
                 <li><span class="allow">✅ Может арестовывать нарушителей (с причиной).</span></li>
             </ul>
         </div>
+        <div class="rule-card">
+            <h3>Шеф полиции</h3>
+            <ul class="rule-list">
+                <li><span class="deny">❌ Не может иметь принтеры (исключение: хранение у банкира).</span></li>
+                <li><span class="deny">❌ Не может сотрудничать с криминалом.</span></li>
+                <li><span class="allow">✅ Управляет полицией, может повышать/понижать.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Спецназ</h3>
+            <ul class="rule-list">
+                <li><span class="deny">❌ Не может иметь принтеры (исключение: хранение у банкира).</span></li>
+                <li><span class="deny">❌ Не может сотрудничать с криминалом.</span></li>
+                <li><span class="allow">✅ Участвует в рейдах и задержаниях.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Командир спецназа</h3>
+            <ul class="rule-list">
+                <li><span class="deny">❌ Не может иметь принтеры (исключение: хранение у банкира).</span></li>
+                <li><span class="deny">❌ Не может сотрудничать с криминалом.</span></li>
+                <li><span class="allow">✅ Управляет спецназом.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Агент ФБР</h3>
+            <ul class="rule-list">
+                <li><span class="deny">❌ Не может иметь принтеры (исключение: хранение у банкира).</span></li>
+                <li><span class="deny">❌ Не может сотрудничать с криминалом.</span></li>
+                <li><span class="allow">✅ Ведет расследования, может арестовывать.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Джаггернаут</h3>
+            <ul class="rule-list">
+                <li><span class="deny">❌ Не может иметь принтеры (исключение: хранение у банкира).</span></li>
+                <li><span class="deny">❌ Не может сотрудничать с криминалом.</span></li>
+                <li><span class="allow">✅ Тяжелобронированный боец, участвует в рейдах.</span></li>
+            </ul>
+        </div>
+
+        <!-- ГОСУДАРСТВЕННАЯ ВЛАСТЬ -->
         <div class="rule-card">
             <h3>Мэр</h3>
             <ul class="rule-list">
@@ -237,6 +420,8 @@
                 <li><span class="deny">❌ Запрещено устанавливать стоимость лицензии свыше 50 тысяч.</span></li>
             </ul>
         </div>
+
+        <!-- СОТРУДНИКИ БАНКА -->
         <div class="rule-card">
             <h3>Банкир</h3>
             <ul class="rule-list">
@@ -246,30 +431,15 @@
             </ul>
         </div>
         <div class="rule-card">
-            <h3>Jacket</h3>
+            <h3>Инкассатор</h3>
             <ul class="rule-list">
-                <li><span class="deny">❌ Не может рейдить.</span></li>
-                <li><span class="deny">❌ Не может грабить.</span></li>
-                <li><span class="allow">✅ Может похищать, но только при 3 свидетелях.</span></li>
-                <li><span class="allow">✅ Может убивать, но только если на него напали (или по RP-причине).</span></li>
-                <li><span class="deny">❌ Не может убивать, если есть свидетели.</span></li>
-                <li><span class="deny">❌ Не может убивать в общественных местах (исключение: если свидетелей нет).</span></li>
-                <li><span class="deny">❌ Не может убивать в спавне.</span></li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Опасная Бандитка</h3>
-            <ul class="rule-list">
-                <li><span class="allow">✅ Может рейдить.</span></li>
-                <li><span class="allow">✅ Может грабить, но только при 2 свидетелях.</span></li>
-                <li><span class="deny">❌ Нельзя грабить в общественных местах (исключение: если свидетелей 2).</span></li>
-                <li><span class="deny">❌ Не может похищать при свидетелях, если их больше чем 3.</span></li>
-                <li><span class="allow">✅ Имеет бонус к здоровью и оружию.</span></li>
+                <li><span class="deny">❌ Не может иметь личные принтеры (только рабочие банковские).</span></li>
+                <li><span class="allow">✅ Может сотрудничать с Банкиром и гос. служащими.</span></li>
+                <li><span class="deny">❌ Запрещено сотрудничать с криминалом.</span></li>
             </ul>
         </div>
 
         <!-- КОРПОРАЦИЯ COBALT -->
-        <h2 class="category-title" style="font-size: 1.3rem; color: var(--neon-blue);">🔬 КОРПОРАЦИЯ COBALT</h2>
         <div class="rule-card">
             <h3>Руководитель Кобальт</h3>
             <ul class="rule-list">
@@ -306,6 +476,43 @@
             </ul>
         </div>
 
+        <!-- ДРУГИЕ -->
+        <div class="rule-card">
+            <h3>Забанен</h3>
+            <ul class="rule-list">
+                <li><span class="deny">❌ Ничего не может делать, кроме как сидеть в тюрьме.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Администратор</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Следит за порядком, банит нарушителей.</span></li>
+                <li><span class="deny">❌ Не может использовать админ-команды в личных целях.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Jacket</h3>
+            <ul class="rule-list">
+                <li><span class="deny">❌ Не может рейдить.</span></li>
+                <li><span class="deny">❌ Не может грабить.</span></li>
+                <li><span class="allow">✅ Может похищать, но только при 3 свидетелях.</span></li>
+                <li><span class="allow">✅ Может убивать, но только если на него напали (или по RP-причине).</span></li>
+                <li><span class="deny">❌ Не может убивать, если есть свидетели.</span></li>
+                <li><span class="deny">❌ Не может убивать в общественных местах (исключение: если свидетелей нет).</span></li>
+                <li><span class="deny">❌ Не может убивать в спавне.</span></li>
+            </ul>
+        </div>
+        <div class="rule-card">
+            <h3>Опасная Бандитка</h3>
+            <ul class="rule-list">
+                <li><span class="allow">✅ Может рейдить.</span></li>
+                <li><span class="allow">✅ Может грабить, но только при 2 свидетелях.</span></li>
+                <li><span class="deny">❌ Нельзя грабить в общественных местах (исключение: если свидетелей 2).</span></li>
+                <li><span class="deny">❌ Не может похищать при свидетелях, если их больше чем 3.</span></li>
+                <li><span class="allow">✅ Имеет бонус к здоровью и оружию.</span></li>
+            </ul>
+        </div>
+
         <!-- РАЗДЕЛИТЕЛЬ -->
         <div class="divider"></div>
 
@@ -322,343 +529,25 @@
             </ul>
         </div>
 
-        <div class="rule-card">
-            <h3>AdminAbuse (AA)</h3>
-            <ul class="punish-list">
-                <li>D 1</li>
-                <li>D 2 (возможно снятие в зависимости от тяжести нарушения).</li>
-                <li>D 3 (снятие).</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>FreeKill (FK)</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>H 4</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>NonRP (NRP)</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>PropSurf</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>H 3</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>OCK и Оск. поведение</h3>
-            <ul class="punish-list">
-                <li>Предупреждение с объяснением правила.</li>
-                <li>MI 10</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>NLR</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>H 3</li>
-                <li>D 2</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>FreeDemote</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>H 1</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>JobAbuse</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>FreeDamage</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>FearRP</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>H 5</li>
-                <li>D 3</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Custom Job</h3>
-            <ul class="punish-list">
-                <li>Установка профессии "Гражданин".</li>
-                <li>MI 10</li>
-                <li>MI 30</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>RDM</h3>
-            <ul class="punish-list">
-                <li>D 7</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>FreeArrest</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>PropBlock</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Багоюз</h3>
-            <ul class="punish-list">
-                <li>MI 30</li>
-                <li>H 1</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Обман администрации</h3>
-            <ul class="punish-list">
-                <li>MI 30</li>
-                <li>H 1</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>ArmedRP</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>H 1</li>
-                <li>H 5</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>MetaGaming (MG)</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>H 5</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Использование/Хранение доп. ПО / Отказ от проверки на доп. ПО</h3>
-            <ul class="punish-list">
-                <li>D 7 / Перманент (по решению высшей администрации).</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Spam/flood в игровой текстовый/голосовой чат</h3>
-            <ul class="punish-list">
-                <li>MI 5 (Мут)</li>
-                <li>MI 10 (Мут)</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Хранение/использование запрещённого оружия</h3>
-            <ul class="punish-list">
-                <li>D 1</li>
-                <li>D 7</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Нарушение правил строительства (НПС)</h3>
-            <ul class="punish-list">
-                <li>Удаление постройки с объяснением правила.</li>
-                <li>H 2</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Реклама сторонних серверов/сайтов/каналов каких-либо платформ/коммерция в OOC</h3>
-            <ul class="punish-list">
-                <li>H 2</li>
-                <li>D 1</li>
-                <li>D 7</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Leave от наказания / Leave с разборок / Leave с RP / Leave с NonRP-сделки</h3>
-            <ul class="punish-list">
-                <li>D 1 (не стакается).</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Fading Door Abuse (FDA)</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>GreenZone Abuse (GZA)</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>H 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>DonateAbuse (DA)</h3>
-            <ul class="punish-list">
-                <li>D 1</li>
-                <li>D 2</li>
-                <li>D 3</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Убийство NonRP-персонажа</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>H 4</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>NSFW-контент</h3>
-            <ul class="punish-list">
-                <li>D 7</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Оск. проекта/сервера</h3>
-            <ul class="punish-list">
-                <li>D 7</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Отказ от выдачи себе наказания</h3>
-            <ul class="punish-list">
-                <li>H 12 (не стакается).</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Помеха ивенту</h3>
-            <ul class="punish-list">
-                <li>H 12 (не стакается).</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Звуки, которые служат помехой RP</h3>
-            <ul class="punish-list">
-                <li>Предупреждение с объяснением правила.</li>
-                <li>MI 30</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Копирование ника</h3>
-            <ul class="punish-list">
-                <li>Предупреждение о смене ника.</li>
-                <li>Предупреждение о смене ника + MI 10</li>
-                <li>H 6</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Помеха разборкам</h3>
-            <ul class="punish-list">
-                <li>H 2 (не стакается).</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Выдача себя за официальную администрацию</h3>
-            <ul class="punish-list">
-                <li>D 1 (не стакается).</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>PropPush</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>H 3</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Нарушение правил Advert/Anon (НПАА)</h3>
-            <ul class="punish-list">
-                <li>Предупреждение с объяснением правила.</li>
-                <li>MI 10 (Мут)</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Разжигание межнациональной розни</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Нацизм</h3>
-            <ul class="punish-list">
-                <li>D 7</li>
-                <li>Перманент.</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Антиигровое поведение</h3>
-            <ul class="punish-list">
-                <li>D 1</li>
-                <li>D 7</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>FreeTazer</h3>
-            <ul class="punish-list">
-                <li>MI 10</li>
-                <li>MI 30</li>
-                <li>D 1</li>
-            </ul>
-        </div>
-        <div class="rule-card">
-            <h3>Продажа/Покупка за реальные деньги</h3>
-            <ul class="punish-list">
-                <li>D 7</li>
-                <li>Перманент.</li>
-            </ul>
-        </div>
-
-        <!-- РАЗДЕЛИТЕЛЬ -->
-        <div class="divider"></div>
-
-        <!-- ПРАВИЛА ДЛЯ ДОНАТЕРОВ -->
-        <h2 class="category-title">👑 ПРАВИЛА ДЛЯ ИГРОКОВ С ДОНАТОМ</h2>
-        
-        <div class="rule-card">
-            <h3>Общие пояснения</h3>
-            <ul class="rule-list">
-                <li><span class="note">📌 Если одно из правил ниже было нарушено с использованием привилегии администратора, то выдается бан за AdminAbuse. В противном случае выдается бан за DonateAbuse.</span></li>
-                <li><span class="note">📌 При покупке привилегии и многократном нарушении правил, с вас будет снята привилегия.</span></li>
-                <li><span class="note">📌 Пример: игрок с привилегией Curator выдал оружие через Q-меню во время RP-процесса. Поскольку Curator имеет такую возможность, то это нарушение AdminAbuse. Если на его месте был бы VIP или Dmoderator, то, поскольку эти привилегии не имеют возможности выдавать оружие, то нарушение произошло с использованием доната "Выдача оружия через Q-меню" и бан выдается за DonateAbuse.</span></li>
-            </ul>
-        </div>
-
-        <div class="rule-card">
-            <h3>Основные запреты</h3>
-            <ul class="rule-list">
-                <li><span class="deny">❌ Запрещено
+        <div class="rule-card"><h3>AdminAbuse (AA)</h3><ul class="punish-list"><li>D 1</li><li>D 2 (возможно снятие в зависимости от тяжести нарушения).</li><li>D 3 (снятие).</li></ul></div>
+        <div class="rule-card"><h3>FreeKill (FK)</h3><ul class="punish-list"><li>MI 10</li><li>H 4</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>NonRP (NRP)</h3><ul class="punish-list"><li>MI 10</li><li>MI 30</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>PropSurf</h3><ul class="punish-list"><li>MI 10</li><li>H 3</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>OCK и Оск. поведение</h3><ul class="punish-list"><li>Предупреждение с объяснением правила.</li><li>MI 10</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>NLR</h3><ul class="punish-list"><li>MI 10</li><li>H 3</li><li>D 2</li></ul></div>
+        <div class="rule-card"><h3>FreeDemote</h3><ul class="punish-list"><li>MI 10</li><li>H 1</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>JobAbuse</h3><ul class="punish-list"><li>MI 10</li><li>MI 30</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>FreeDamage</h3><ul class="punish-list"><li>MI 10</li><li>MI 30</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>FearRP</h3><ul class="punish-list"><li>MI 10</li><li>H 5</li><li>D 3</li></ul></div>
+        <div class="rule-card"><h3>Custom Job</h3><ul class="punish-list"><li>Установка профессии "Гражданин".</li><li>MI 10</li><li>MI 30</li></ul></div>
+        <div class="rule-card"><h3>RDM</h3><ul class="punish-list"><li>D 7</li></ul></div>
+        <div class="rule-card"><h3>FreeArrest</h3><ul class="punish-list"><li>MI 10</li><li>MI 30</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>PropBlock</h3><ul class="punish-list"><li>MI 10</li><li>MI 30</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>Багоюз</h3><ul class="punish-list"><li>MI 30</li><li>H 1</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>Обман администрации</h3><ul class="punish-list"><li>MI 30</li><li>H 1</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>ArmedRP</h3><ul class="punish-list"><li>MI 10</li><li>H 1</li><li>H 5</li></ul></div>
+        <div class="rule-card"><h3>MetaGaming (MG)</h3><ul class="punish-list"><li>MI 10</li><li>MI 30</li><li>H 5</li></ul></div>
+        <div class="rule-card"><h3>Использование/Хранение доп. ПО / Отказ от проверки на доп. ПО</h3><ul class="punish-list"><li>D 7 / Перманент (по решению высшей администрации).</li></ul></div>
+        <div class="rule-card"><h3>Spam/flood в игровой текстовый/голосовой чат</h3><ul class="punish-list"><li>MI 5 (Мут)</li><li>MI 10 (Мут)</li><li>D 1</li></ul></div>
+        <div class="rule-card"><h3>Хранение/использование запрещённого оружия</h3><ul class="punish-list"><li>D 1</li><li>D 7</li></ul></div>
+        <div class="rule-card"><h3>Нарушение правил строительства (Н
